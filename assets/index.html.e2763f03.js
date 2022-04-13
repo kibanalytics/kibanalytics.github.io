@@ -1,1 +1,0 @@
-const a={key:"v-8daa1a0e",path:"/",title:"Kibanalytics",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1649233608e3,contributors:[{name:"Dario Guarascio",email:"dario.guarascio@gmail.com",commits:2}]},filePathRelative:"README.md"};export{a as data};
