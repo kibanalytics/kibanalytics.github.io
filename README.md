@@ -1,0 +1,3 @@
+# kibanalytics docs
+
+kibanalytics.io
