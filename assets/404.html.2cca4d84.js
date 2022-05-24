@@ -1,0 +1,1 @@
+import{_ as e}from"./app.78c690ee.js";const t={};function r(s,_){return null}var c=e(t,[["render",r],["__file","/Users/ibrahimnetto/GitHub/kibanalytics/docs/.vuepress/.temp/pages/404.html.vue"]]);export{c as default};
