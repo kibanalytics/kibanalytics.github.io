@@ -479,7 +479,7 @@ cp .env.example .env
 cp -r .config.example .config
 docker-compose --profile local --profile production up -d --build
 docker-compose exec node npm run load-dashboards</code></pre>
-			<p>On pages to be tracked:</p>
+			<p>On pages to be tracked</p>
 			<pre><code class="language-markup">&lt;!DOCTYPE html>
 &lt;html lang="en">
 &lt;head>
@@ -496,6 +496,10 @@ docker-compose exec node npm run load-dashboards</code></pre>
 	...
 &lt;/body>
 &lt;/html></code></pre>
+			<p style="margin-top: 4px; font-size: 12px">Alternatively you can access
+				<a class="font-semibold text-green" href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+				to interact with example pages.
+			</p>
 			<p>Open the example dashboard: <br><br>
 				<a class="font-semibold text-green" href="http://localhost:5601/app/dashboards" target="_blank">http://localhost:5601/app/dashboards</a>.
 			</p>
