@@ -1,3 +1,3 @@
-# kibanalytics docs
+# Kibanalytics
 
-kibanalytics.io
+[https://kibanalytics.io](https://kibanalytics.io)
