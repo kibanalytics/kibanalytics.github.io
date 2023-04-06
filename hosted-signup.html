@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link href="/dist/output.css" rel="stylesheet" />
+	<link href="/vendor/prism/prism.css" rel="stylesheet" />
+
+	<link
+	  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+	  rel="stylesheet" />
+	<link
+	  rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+	<script src="//unpkg.com/alpinejs" defer></script>
+	<style>
+		[x-cloak] { display: none }
+	</style>
+
+	<title>Hosted Kibanalytics - Signup</title>
+</head>
+
+<body class="font-custom dark:bg-slate-900 dark:text-slate-200">
+<!--HERO-NAV SECTION-->
+<section id="hero-nav" class="overflow-hidden">
+	<!--NAVBAR-->
+	<nav id="nav-bar"
+		 class="p-4 fixed w-full z-10 top-0 bg-white bg-white/75 border-b border-slate-900/10 dark:bg-slate-900 dark:drop-shadow-none backdrop-blur lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] dark:bg-slate-900/75">
+		<!--Flex container-->
+		<div class="flex items-center justify-between">
+			<!--Logo-->
+			<div class="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-red md:text-2xl">
+				Kibanalytics
+			</div>
+			<!--Menu items-->
+			<div class="hidden text-sm items-center space-x-6 text-darkgray 2xl:text-[15px] xl:flex">
+				<a href="https://kibanalytics.io/quick-start/" target="_blank" class="hover:text-green">Quick Start</a>
+				<a href="https://kibanalytics.io/setup/" target="_blank" class="hover:text-green">Setup</a>
+				<a href="https://kibanalytics.io/back-end-server/" target="_blank" class="hover:text-green">Backend
+					Server</a>
+				<a href="https://kibanalytics.io/front-end-tracker/" target="_blank" class="hover:text-green">Frontend
+					Tracker</a>
+				<a href="https://kibanalytics.io/output-schema/" target="_blank" class="hover:text-green">Output
+					Schema</a>
+				<a href="https://kibanalytics.io/dashboard/" target="_blank" class="hover:text-green">Dashboard</a>
+				<a href="https://github.com/kibanalytics/kibanalytics" target="_blank" class="hover:text-green">GitHub
+					Repo</a>
+				<!--Toggle button light/dark theme-->
+				<div class="flex justify-end items-center space-x-2">
+					<div class="flex">
+						<input type="checkbox" name="" id="toggle" class="hidden" />
+
+						<label for="toggle" class="pointer">
+							<div class="w-22 h-8 flex items-center p-1 rounded-full border-slate-200 dark:border-slate-300 border-[1px] justify-between relative">
+								<img src="./images/navbar/sun-icon.svg" alt="sun icon" class="p-1" />
+
+								<!--Provisional half-moon icon. Ask Raka to provide one of the same style as the sun-icon -->
+								<img src="./images/navbar/half-moon.png" alt="moon icon" class="p-1 w-1/3" />
+
+								<div class="toggle-bar w-12 h-6 right-1 rounded-full bg-gray-toggle-btn dark:bg-slate-300 absolute transform duration-300 ease-in-out"></div>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex xl:hidden gap-6">
+				<div>
+					<input type="checkbox" name="" id="toggle-mobile" class="hidden" />
+					<label for="toggle">
+						<img id="icon" alt="icon" class="p-1 w-6" />
+					</label>
+				</div>
+
+				<!--Hamburger icon-->
+				<button id="menu-btn" class="block hamburger focus:outline-none">
+					<span class="hamburger-top"></span>
+					<span class="hamburger-middle"></span>
+					<span class="hamburger-bottom"></span>
+				</button>
+			</div>
+		</div>
+
+		<!--Mobile menu-->
+
+		<div class="xl:hidden">
+			<div id="menu"
+				 class="absolute -ml-4 top-0 flex-col items-center self-end py-8 mt-14 hidden space-y-8 font-bold bg-white border-b border-slate-900/10 dark:bg-slate-900 dark:border-slate-50/[0.06] w-full">
+				<a href="https://kibanalytics.io/quick-start/" target="_blank">Quick Start</a>
+				<a href="https://kibanalytics.io/setup/" target="_blank">Setup</a>
+				<a href="https://kibanalytics.io/back-end-server/" target="_blank">Backend Server</a>
+				<a href="https://kibanalytics.io/front-end-tracker/" target="_blank">Frontend Tracker</a>
+				<a href="https://kibanalytics.io/output-schema/" target="_blank">Output Schema</a>
+				<a href="https://kibanalytics.io/dashboard/" target="_blank">Dashboard</a>
+				<a href="https://github.com/kibanalytics/kibanalytics" target="_blank">GitHub Repo</a>
+			</div>
+		</div>
+	</nav>
+
+	<!--HERO SECTION-->
+	<section id="hero">
+		<!--Flex container-->
+		<div class="container flex flex-col items-center px-6 mt-32 mx-auto space-y-0 gap-5 md:space-y-0 md:flex-row md:my-56 3xl:px-28">
+			<!--Left item-->
+			<div class="flex flex-col space-y-2 md:mb-32 md:w-1/2">
+				<h1 class="text-[32px] font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-green via-red to-green animate-text md:text-4xl md:text-left xl:text-5xl xl:leading-[67px]">
+					Signup for the hosted version
+				</h1>
+
+				<p class="text-center text-base text-base leading-7 text-lightgray-hero-p dark:text-slate-400 md:text-lg md:text-left md:w-11/12 xl:text-2xl xl:leading-[34px] 2xl:w-full">
+					<span class="block text-xl pb-2">Give Kibanalytics a <strong>try</strong>, for <strong>free</strong>.</span>
+					Signup for our hosted version beta testing.<br/>
+					You give us feedbacks, we give you <strong>60</strong> days of free hosting.<br/>
+					And support for migrating, should you decide so.
+				</p>
+
+			</div>
+			<!--Image-->
+			<div class="flex md:w-1/2">
+
+
+<div
+  class="block max-w-md rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+  <form x-data="{
+  		sending: false,
+  		sent: false,
+  		error: false,
+  		send: async function() {
+			const data = new FormData(document.getElementsByTagName('form')[0]);
+			const json = Object.fromEntries(data.entries());
+			try {
+				const signup = await fetch('https://hosted.kibanalytics.com/public/signup', {
+					method: 'post',
+					headers: {
+			            'Content-Type':'application/json',
+			        },
+					body: JSON.stringify(json)
+				})
+				console.log(await signup.json())
+				this.sending = false;
+				this.sent = true;
+
+			} catch (e) {
+				this.error = true;
+				this.sending = false;
+				this.sent = false;
+			}
+  		}
+
+  	}" onsubmit="return false">
+    <div class="grid grid-cols-2 gap-4">
+      <!--First name input-->
+      <div class="relative pt-2 mb-6" data-te-input-wrapper-init>
+        <input
+          type="text"
+          class="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+          name="first_name"
+          id="first_name"
+          aria-describedby="first_name"
+          placeholder="First name" />
+        <label
+          for="first_name"
+          class="text-gray-500 pl-2 text-sm"
+          >First name
+        </label>
+
+      </div>
+
+      <!--Last name input-->
+      <div class="relative pt-2 mb-6" data-te-input-wrapper-init>
+        <input
+          type="text"
+          class="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+          name="last_name"
+          id="last_name"
+          aria-describedby="last_name"
+          placeholder="Last name" />
+        <label
+          for="last_name"
+          class="text-gray-500 pl-2 text-sm"
+          >Last name
+        </label>
+      </div>
+    </div>
+
+    <!--Email input-->
+    <div class="relative mb-6" data-te-input-wrapper-init>
+      <input
+        type="email"
+        class="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+        name="email"
+        id="email"
+        placeholder="Email address" />
+      <label
+        for="email"
+        class="text-gray-500 pl-2 text-sm"
+        >Email, needs to be a Gmail, login is provided by Google
+      </label>
+    </div>
+
+
+     <span
+		x-cloak
+		x-show="sent"
+     	class="flex items-center text-green justify-center py-4">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 pr-1">
+		  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+		</svg>
+		 <span> Thank you!</span>
+     </span>
+
+     <span
+		x-cloak
+		x-show="error"
+     	class="flex items-center justify-center py-4" style="color: #f87171">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 pr-1">
+		  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+		</svg>
+		 <span> Something went wrong. </span>
+     </span>
+
+
+
+    <!--Submit button-->
+    <button
+      x-show="!sent"
+      class="inline-block w-full rounded
+
+p-3 px-6 text-lg text-white font-bold bg-green rounded baseline md:hover:bg-green-hover
+
+
+      "
+      x-on:click="sending = true; send();"
+	>
+
+	<div
+	  x-cloak
+	  x-show="sending && !sent"
+	  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+	  role="status">
+	  <span
+	    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+	    >Loading...</span
+	  >
+	</div>
+
+     <span x-show="!sending && !sent">Sign up</span>
+    </button>
+
+    <!--Subscribe newsletter checkbox-->
+    <div
+      class="mb-4 mt-4 flex min-h-[1.5rem] items-center pl-[1.5rem]">
+      <input
+        class="relative float-left -ml-[1.5rem] mr-[6px] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary"
+        type="checkbox"
+        value=""
+        name="newsletter"
+        id="exampleCheck25" />
+      <label
+        class="inline-block pl-[0.15rem] hover:cursor-pointer text-gray-500"
+        for="exampleCheck25">
+        Subscribe to our newsletter
+      </label>
+    </div>
+
+
+
+  </form>
+</div>
+
+
+
+			</div>
+		</div>
+	</section>
+</section>
+
+
+<script src="./vendor/prism/prism.js"></script>
+<script src="./js/script.js"></script>
+</body>
+
+</html>
